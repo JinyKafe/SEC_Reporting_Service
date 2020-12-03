@@ -1,0 +1,21 @@
+<configuration>
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="CONSOLE">
+    <!-- Use json format on live systems (env variable SPRING_PROFILES_ACTIVE is defined on them) -->
+    <if condition='isDefined("SPRING_PROFILES_ACTIVE")'>
+      <then>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+      </then>
+      <else>
+        <encoder>
+          <pattern>
+            [%thread] %highlight(%-5level) %white(%logger{15}) report/ %X{mdc-report-type} %X{mdc-report-id}/ %X{mdc-task} %highlight(%X{mdc-task-step} - %msg) - %white(job/ %X{mdc-job-id}/ %X{mdc-job-state} request/ %X{spanId}/ %X{traceId} user/ %X{user-id}) %n
+          </pattern>
+        </encoder>
+      </else>
+    </if>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="CONSOLE"/>
+  </root>
+</configuration>

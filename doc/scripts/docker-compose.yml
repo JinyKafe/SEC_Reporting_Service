@@ -1,0 +1,41 @@
+version: "3"
+
+# useful container to run the application locally. The container settings are configured in correspondence for application.properties.
+# therefore you should be able to connect with your application out of the box
+services:
+  sec-scopedata-mssql-local:
+    container_name: sec-scopedata-mssql-local
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+      - 1433:1433
+    volumes:
+      - volume-mssqlsystem-sec-scopedata:/var/opt/mssql
+      - volume-mssqluser-sec-scopedata:/var/opt/sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=local-scoperepository-db-password-123
+
+  sec-xbrl-mssql-local:
+    container_name: sec-xbrl-mssql-local
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+      - 1434:1433
+    volumes:
+      - volume-mssqlsystem-sec-xbrl:/var/opt/mssql
+      - volume-mssqluser-sec-xbrl:/var/opt/sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=local-xbrlrepository-db-password-123
+
+  sec-redis-local:
+    container_name: sec-redis-local
+    command: redis-server --requirepass sec-redis-local-password-123
+    image: redis:6.0.8
+    ports:
+      - 6379:6379
+
+volumes:
+  volume-mssqlsystem-sec-scopedata:
+  volume-mssqluser-sec-scopedata:
+  volume-mssqlsystem-sec-xbrl:
+  volume-mssqluser-sec-xbrl:

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:r="http://xbrl.sec.gov/ratings/2015-03-31" xmlns:XLink="http://www.xbrl.org/2003/XLink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xbrl.sec.gov/ratings/2015-03-31 http://xbrl.sec.gov/rocr/2015/ratings-2015-03-31.xsd">
+    <link:schemaRef xlink:type="simple" xlink:href="http://xbrl.sec.gov/rocr/2015/ratings-2015-03-31.xsd"/>
+    <xbrli:context id="m">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.sec.gov/NRSRO">SCOPERATINGS</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:startDate>2019-05-29</xbrli:startDate>
+            <xbrli:endDate>2020-06-24</xbrli:endDate>
+        </xbrli:period>
+    </xbrli:context>
+    <xbrli:unit id="u-pure">
+        <xbrli:measure xmlns:ISO4217="http://www.xbrl.org/2003/iso4217">ISO4217:PURE</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:unit id="u-eur">
+        <xbrli:measure xmlns:ISO4217="http://www.xbrl.org/2003/iso4217">ISO4217:EUR</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:unit id="u-gbp">
+        <xbrli:measure xmlns:ISO4217="http://www.xbrl.org/2003/iso4217">ISO4217:GBP</xbrli:measure>
+    </xbrli:unit>
+    <r:ROCRA>
+        <r:RAN contextRef="m">SCOPERATINGS</r:RAN>
+        <r:FCD contextRef="m">2020-06-05</r:FCD>
+        <r:ISD>
+            <r:SSC contextRef="m">Corporate</r:SSC>
+            <r:IG contextRef="m">Automotive Manufacturer</r:IG>
+            <r:ISSNAME contextRef="m">Daimler AG</r:ISSNAME>
+            <r:LEI contextRef="m">529900R27DL06UVNT076</r:LEI>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   2.250 01/24/22 MTN</r:INSTNAME>
+                <r:INI contextRef="m">DE000A1R04X6</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.0225</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">2.2500</r:CR>
+                <r:MD contextRef="m">2022-01-24</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">750000000</r:PV>
+                <r:ISUD contextRef="m">2014-01-24</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-24</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   1.500 07/03/29 MTN</r:INSTNAME>
+                <r:INI contextRef="m">DE000A2GSCW3</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.0150</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">1.5000</r:CR>
+                <r:MD contextRef="m">2029-07-03</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">1500000000</r:PV>
+                <r:ISUD contextRef="m">2017-07-03</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-24</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   1.875 07/08/24 MTN</r:INSTNAME>
+                <r:INI contextRef="m">DE000A11QSB8</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.01875</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">1.8750</r:CR>
+                <r:MD contextRef="m">2024-07-08</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">500000000</r:PV>
+                <r:ISUD contextRef="m">2014-07-08</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-24</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   0.875 01/12/21 MTN</r:INSTNAME>
+                <r:INI contextRef="m">DE000A169G07</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.00875</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">0.8750</r:CR>
+                <r:MD contextRef="m">2021-01-12</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">1000000000</r:PV>
+                <r:ISUD contextRef="m">2016-01-12</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-24</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   0.750 05/11/23 MTN</r:INSTNAME>
+                <r:INI contextRef="m">DE000A169NB4</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.0075</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">0.7500</r:CR>
+                <r:MD contextRef="m">2023-05-11</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">750000000</r:PV>
+                <r:ISUD contextRef="m">2016-05-11</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-24</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   1.375 05/11/28 MTN</r:INSTNAME>
+                <r:INI contextRef="m">DE000A169NC2</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.01375</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">1.3750</r:CR>
+                <r:MD contextRef="m">2028-05-11</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">1250000000</r:PV>
+                <r:ISUD contextRef="m">2016-05-11</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-24</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   1.600 10/01/25 MTN</r:INSTNAME>
+                <r:INI contextRef="m">XS1294414617</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.0160</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">1.6000</r:CR>
+                <r:MD contextRef="m">2025-10-01</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">51500000</r:PV>
+                <r:ISUD contextRef="m">2015-10-01</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-24</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   1.356 06/18/20 FRN MTN</r:INSTNAME>
+                <r:INI contextRef="m">XS1246888173</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.01356</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">1.3560</r:CR>
+                <r:MD contextRef="m">2020-06-18</r:MD>
+                <r:PV unitRef="u-gbp" contextRef="m">90000000</r:PV>
+                <r:ISUD contextRef="m">2015-06-18</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-18</r:RAD>
+                    <r:RAC contextRef="m">WE</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">DAIG   2.375 12/16/21 MTN</r:INSTNAME>
+                <r:INI contextRef="m">XS1334170799</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.02375</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">2.3750</r:CR>
+                <r:MD contextRef="m">2021-12-16</r:MD>
+                <r:PV unitRef="u-gbp" contextRef="m">250000000</r:PV>
+                <r:ISUD contextRef="m">2015-12-16</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2019-05-29</r:RAD>
+                    <r:RAC contextRef="m">NW</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A</r:R>
+                    <r:RAD contextRef="m">2020-06-24</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+        </r:ISD>
+    </r:ROCRA>
+</xbrli:xbrl>

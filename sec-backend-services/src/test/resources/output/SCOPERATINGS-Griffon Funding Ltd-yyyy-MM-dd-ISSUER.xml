@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:r="http://xbrl.sec.gov/ratings/2015-03-31" xmlns:XLink="http://www.xbrl.org/2003/XLink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xbrl.sec.gov/ratings/2015-03-31 http://xbrl.sec.gov/rocr/2015/ratings-2015-03-31.xsd">
+    <link:schemaRef xlink:type="simple" xlink:href="http://xbrl.sec.gov/rocr/2015/ratings-2015-03-31.xsd"/>
+    <xbrli:context id="m">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.sec.gov/NRSRO">SCOPERATINGS</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:startDate>2017-12-31</xbrli:startDate>
+            <xbrli:endDate>2019-08-07</xbrli:endDate>
+        </xbrli:period>
+    </xbrli:context>
+    <xbrli:unit id="u-gbp">
+        <xbrli:measure xmlns:ISO4217="http://www.xbrl.org/2003/iso4217">ISO4217:GBP</xbrli:measure>
+    </xbrli:unit>
+    <r:ROCRA>
+        <r:RAN contextRef="m">SCOPERATINGS</r:RAN>
+        <r:FCD contextRef="m">2020-06-05</r:FCD>
+        <r:ISD>
+            <r:SSC contextRef="m">CMBS</r:SSC>
+            <r:IG contextRef="m">Financial - Other</r:IG>
+            <r:ISSNAME contextRef="m">Griffon Funding Ltd</r:ISSNAME>
+            <r:LEI contextRef="m">213800GVKUDB4UVJN507</r:LEI>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">Griffon Funding Ltd – A Loan Debenture A1</r:INSTNAME>
+                <r:INI contextRef="m">45613482-4B07-4EE2-9827-8A853BA2ECD4</r:INI>
+                <r:INIS contextRef="m">NRSRO</r:INIS>
+                <r:MD contextRef="m">2028-07-21</r:MD>
+                <r:PV unitRef="u-gbp" contextRef="m">1822337087</r:PV>
+                <r:ISUD contextRef="m">2016-09-26</r:ISUD>
+                <r:RODC contextRef="m">Senior Secured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AAA (SF)</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AAA (SF)</r:R>
+                    <r:RAD contextRef="m">2018-01-31</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AAA (SF)</r:R>
+                    <r:RAD contextRef="m">2018-11-02</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AAA (SF)</r:R>
+                    <r:RAD contextRef="m">2018-11-15</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AAA (SF)</r:R>
+                    <r:RAD contextRef="m">2019-08-07</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">Griffon Funding Ltd – A Loan Debenture A2</r:INSTNAME>
+                <r:INI contextRef="m">97652849-6BAF-44FD-96D5-1B73EA2B26A3</r:INI>
+                <r:INIS contextRef="m">NRSRO</r:INIS>
+                <r:MD contextRef="m">2028-07-21</r:MD>
+                <r:PV unitRef="u-gbp" contextRef="m">328020676</r:PV>
+                <r:ISUD contextRef="m">2016-09-26</r:ISUD>
+                <r:RODC contextRef="m">Mezzanine</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AA (SF)</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AA+ (SF)</r:R>
+                    <r:RAD contextRef="m">2018-01-31</r:RAD>
+                    <r:RAC contextRef="m">UP</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AA+ (SF)</r:R>
+                    <r:RAD contextRef="m">2018-11-02</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AA+ (SF)</r:R>
+                    <r:RAD contextRef="m">2018-11-15</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">AA+ (SF)</r:R>
+                    <r:RAD contextRef="m">2019-08-07</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">Griffon Funding Ltd – A Loan Debenture A3</r:INSTNAME>
+                <r:INI contextRef="m">A5A64FDD-F5B2-4BA1-B7A9-18DA991B2E25</r:INI>
+                <r:INIS contextRef="m">NRSRO</r:INIS>
+                <r:MD contextRef="m">2028-07-21</r:MD>
+                <r:PV unitRef="u-gbp" contextRef="m">133638053</r:PV>
+                <r:ISUD contextRef="m">2016-09-26</r:ISUD>
+                <r:RODC contextRef="m">Mezzanine</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A (SF)</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A+ (SF)</r:R>
+                    <r:RAD contextRef="m">2018-01-31</r:RAD>
+                    <r:RAC contextRef="m">UP</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A (SF)</r:R>
+                    <r:RAD contextRef="m">2018-11-02</r:RAD>
+                    <r:RAC contextRef="m">DG</r:RAC>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A (SF)</r:R>
+                    <r:RAD contextRef="m">2018-11-15</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">true</r:IP>
+                    <r:R contextRef="m">A (SF)</r:R>
+                    <r:RAD contextRef="m">2019-08-07</r:RAD>
+                    <r:ROL contextRef="m">None</r:ROL>
+                    <r:OAN contextRef="m">Affirmation</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+        </r:ISD>
+    </r:ROCRA>
+</xbrli:xbrl>

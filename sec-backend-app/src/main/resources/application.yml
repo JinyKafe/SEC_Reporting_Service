@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: secreporting-restservice-app
+
+---
+spring:
+  profiles: local
+  datasource:
+    data:

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>sec-reporting</artifactId>
+    <groupId>de.scope.scopeone</groupId>
+    <version>0.0.6-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>sec-module-xbrlmapper</artifactId>
+  <version>0.0.6-SNAPSHOT</version>
+  <name>SEC module / XBRLMAPPER</name>
+  <description>SEC reporting / module for mapping of JPA entities to DTO objects for XBLR module. Fine grained validation of data correctness happens here
+    (lieke allowed combination of fields, ...)
+  </description>
+
+  <dependencies>
+    <!-- ************* -->
+    <!-- SEC modules -->
+    <!-- ************* -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>sec-module-xbrlgenerator</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>sec-module-scoperepository</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>sec-common-lib</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- *************** -->
+    <!-- Test            -->
+    <!-- *************** -->
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>

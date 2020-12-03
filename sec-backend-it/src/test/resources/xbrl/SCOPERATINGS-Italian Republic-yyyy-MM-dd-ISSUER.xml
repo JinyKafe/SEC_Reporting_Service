@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:r="http://xbrl.sec.gov/ratings/2015-03-31" xmlns:XLink="http://www.xbrl.org/2003/XLink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xbrl.sec.gov/ratings/2015-03-31 http://xbrl.sec.gov/rocr/2015/ratings-2015-03-31.xsd">
+    <link:schemaRef xlink:type="simple" xlink:href="http://xbrl.sec.gov/rocr/2015/ratings-2015-03-31.xsd"/>
+    <xbrli:context id="m">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.sec.gov/NRSRO">SCOPERATINGS</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:startDate>2017-12-31</xbrli:startDate>
+            <xbrli:endDate>2020-05-15</xbrli:endDate>
+        </xbrli:period>
+    </xbrli:context>
+    <xbrli:unit id="u-pure">
+        <xbrli:measure xmlns:ISO4217="http://www.xbrl.org/2003/iso4217">ISO4217:PURE</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:unit id="u-eur">
+        <xbrli:measure xmlns:ISO4217="http://www.xbrl.org/2003/iso4217">ISO4217:EUR</xbrli:measure>
+    </xbrli:unit>
+    <r:ROCRA>
+        <r:RAN contextRef="m">SCOPERATINGS</r:RAN>
+        <r:FCD contextRef="m">2020-06-05</r:FCD>
+        <r:ISD>
+            <r:SSC contextRef="m">Sovereign</r:SSC>
+            <r:IG contextRef="m">Sovereign</r:IG>
+            <r:ISSNAME contextRef="m">Italian Republic</r:ISSNAME>
+            <r:LEI contextRef="m">815600DE60799F5A9309</r:LEI>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">ITGV   4.200 07/25/42</r:INSTNAME>
+                <r:INI contextRef="m">XS0740661516</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.0420</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">4.2000</r:CR>
+                <r:MD contextRef="m">2042-07-25</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">230000000</r:PV>
+                <r:ISUD contextRef="m">2012-02-01</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2020-05-15</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2018-06-08</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2018-12-07</r:RAD>
+                    <r:RAC contextRef="m">DG</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">ITGV   1.771 03/05/29</r:INSTNAME>
+                <r:INI contextRef="m">XS1199014306</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.01771</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">1.7710</r:CR>
+                <r:MD contextRef="m">2029-03-05</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">500000000</r:PV>
+                <r:ISUD contextRef="m">2015-03-05</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2020-05-15</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2018-06-08</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2018-12-07</r:RAD>
+                    <r:RAC contextRef="m">DG</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">ITGV   3.444 12/31/24</r:INSTNAME>
+                <r:INI contextRef="m">XS0747189651</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.03444</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">3.4440</r:CR>
+                <r:MD contextRef="m">2024-12-31</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">437500000</r:PV>
+                <r:ISUD contextRef="m">2012-02-13</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2020-05-15</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2018-06-08</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2018-12-07</r:RAD>
+                    <r:RAC contextRef="m">DG</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">ITGV   4.450 12/23/21</r:INSTNAME>
+                <r:INI contextRef="m">XS0572691979</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.0445</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">4.4500</r:CR>
+                <r:MD contextRef="m">2021-12-23</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">150000000</r:PV>
+                <r:ISUD contextRef="m">2010-12-23</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2020-05-15</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2018-06-08</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2018-12-07</r:RAD>
+                    <r:RAC contextRef="m">DG</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">ITGV   2.200 09/15/58</r:INSTNAME>
+                <r:INI contextRef="m">XS0342993747</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.0220</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">2.2000</r:CR>
+                <r:MD contextRef="m">2058-09-15</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">500000000</r:PV>
+                <r:ISUD contextRef="m">2008-01-22</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2020-05-15</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2018-06-08</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2018-12-07</r:RAD>
+                    <r:RAC contextRef="m">DG</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">ITGV   1.448 04/17/27</r:INSTNAME>
+                <r:INI contextRef="m">XS1505666815</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.01448</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">1.4480</r:CR>
+                <r:MD contextRef="m">2027-04-17</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">900000000</r:PV>
+                <r:ISUD contextRef="m">2016-10-17</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2020-05-15</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2018-06-08</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2018-12-07</r:RAD>
+                    <r:RAC contextRef="m">DG</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+            <r:IND>
+                <r:OBT contextRef="m">Instrument</r:OBT>
+                <r:INSTNAME contextRef="m">ITGV   2.000 09/15/62</r:INSTNAME>
+                <r:INI contextRef="m">XS0293217799</r:INI>
+                <r:INIS contextRef="m">ISIN</r:INIS>
+                <r:IRTD contextRef="m">0.0200</r:IRTD>
+                <r:CR unitRef="u-pure" contextRef="m">2.0000</r:CR>
+                <r:MD contextRef="m">2062-09-15</r:MD>
+                <r:PV unitRef="u-eur" contextRef="m">250000000</r:PV>
+                <r:ISUD contextRef="m">2007-03-30</r:ISUD>
+                <r:RODC contextRef="m">Senior Unsecured</r:RODC>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2020-05-15</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2018-06-08</r:RAD>
+                    <r:ROL contextRef="m">Negative</r:ROL>
+                    <r:OAN contextRef="m">Outlook Trend</r:OAN>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">BBB+</r:R>
+                    <r:RAD contextRef="m">2018-12-07</r:RAD>
+                    <r:RAC contextRef="m">DG</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+                <r:INRD>
+                    <r:IP contextRef="m">false</r:IP>
+                    <r:R contextRef="m">A-</r:R>
+                    <r:RAD contextRef="m">2017-12-31</r:RAD>
+                    <r:RAC contextRef="m">HS</r:RAC>
+                    <r:ROL contextRef="m">Stable</r:ROL>
+                    <r:RT contextRef="m">Rating</r:RT>
+                    <r:RTT contextRef="m">long-term</r:RTT>
+                </r:INRD>
+            </r:IND>
+        </r:ISD>
+    </r:ROCRA>
+</xbrli:xbrl>

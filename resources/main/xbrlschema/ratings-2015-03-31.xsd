@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://xbrl.sec.gov/ratings/2015-03-31" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:r="http://xbrl.sec.gov/ratings/2015-03-31" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xs:element name="ROCRA" id="r_ROCRA" substitutionGroup="xbrli:tuple">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Container element for the required rating agency name, file creation date, and any number of obligor or issuer
+        detail elements.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="r:RAN"/>
+        <xs:element ref="r:FCD"/>
+        <xs:choice>
+          <xs:element maxOccurs="unbounded" minOccurs="1" ref="r:OD"/>
+          <xs:element maxOccurs="unbounded" minOccurs="1" ref="r:ISD"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="xbrli:tupleAttrs"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RAN" id="r_RAN" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Name of the NRSRO.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FCD" id="r_FCD" type="xbrli:dateItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Date the file was actually created by the NRSRO.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="OD" id="r_OD" substitutionGroup="xbrli:tuple" nillable="false">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The container element for the Obligor details.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="r:OSC"/>
+        <xs:element minOccurs="0" ref="r:OIG"/>
+        <xs:element ref="r:OBNAME"/>
+        <xs:choice>
+          <xs:sequence>
+            <xs:element ref="r:LEI"/>
+            <xs:element minOccurs="0" ref="r:CIK"/>
+            <xs:group minOccurs="0" ref="r:ObligorIdentifier"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element ref="r:CIK"/>
+            <xs:group minOccurs="0" ref="r:ObligorIdentifier"/>
+          </xs:sequence>
+          <xs:group ref="r:ObligorIdentifier"/>
+        </xs:choice>
+        <xs:element maxOccurs="unbounded" ref="r:ORD"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="xbrli:tupleAttrs"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OSC" id="r_OSC" type="r:SECCategoryItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">This item indicates obligor subclass as defined by the SEC. This can be one of the following: Financial,
+        Insurance, Corporate, RMBS, CMBS, CLO, CDO, ABCP, Other ABS, Other SFP, Sovereign, US Public or INT Public.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="SECCategoryItemType">
+    <xs:simpleContent>
+      <xs:restriction base="xbrli:stringItemType">
+        <xs:enumeration value="Financial"/>
+        <xs:enumeration value="Insurance"/>
+        <xs:enumeration value="Corporate"/>
+        <xs:enumeration value="RMBS"/>
+        <xs:enumeration value="CMBS"/>
+        <xs:enumeration value="CLO"/>
+        <xs:enumeration value="CDO"/>
+        <xs:enumeration value="ABCP"/>
+        <xs:enumeration value="Other ABS"/>
+        <xs:enumeration value="Other SFP"/>
+        <xs:enumeration value="Sovereign"/>
+        <xs:enumeration value="US Public"/>
+        <xs:enumeration value="INT Public"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="OIG" id="r_OIG" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Used to identify the specific industry of the issuer rather than the broad heading provided by the SEC Rating
+        class. For example this could be Bank, Property Insurance etc. The values used are the proprietary values used by the NRSRO.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OBNAME" id="r_OBNAME" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Legal name of the obligor.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LEI" id="r_LEI" type="r:leiItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Legal Entity Identifier</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="leiItemType">
+    <xs:simpleContent>
+      <xs:restriction base="xbrli:stringItemType">
+        <xs:pattern value="[0-9A-Z]{20}"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="CIK" id="r_CIK" type="r:centralIndexKey2ItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">A unique 10-digit SEC-issued value to identify entities that have filed in EDGAR.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="centralIndexKey2ItemType">
+    <xs:simpleContent>
+      <xs:restriction base="xbrli:stringItemType">
+        <xs:pattern value="[0-9]{10}"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:group name="ObligorIdentifier">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">If an obligor has multiple identifiers for the legal entities contained then multiple obligor identifiers can be
+        used.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="r:OI"/>
+      <xs:choice>
+        <xs:element ref="r:OIS"/>
+        <xs:element ref="r:OIOS"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="OI" id="r_OI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The unique identifier used to identify an obligor. The identifier used is based on the identification scheme
+        used.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OIS" id="r_OIS" type="r:issuerIdentifierSchemeItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The naming standard used for the obligor identifier. This could be CUSIP, DUNS, BIC, SICC, NRSRO or Other. This
+        taxonomy allows multiple identifiers to be described. If the identifier is the proprietary numbering identifier of the NRSRO then use "NRSRO".
+        If the identifier does not exist in the enumerated list then use the item "Obligor Identifier Other Scheme" to define the alternative identifier
+        scheme. The value used for "Obligor Identifier Other Scheme" should be the acronym of the identifier scheme in upper case. CIK should not be
+        used as an identification scheme as this is explicitly defined.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="issuerIdentifierSchemeItemType">
+    <xs:simpleContent>
+      <xs:restriction base="xbrli:stringItemType">
+        <xs:enumeration value="CUSIP"/>
+        <xs:enumeration value="DUNS"/>
+        <xs:enumeration value="BIC"/>
+        <xs:enumeration value="SICC"/>
+        <xs:enumeration value="NRSRO"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="OIOS" id="r_OIOS" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">This item may be used if the value of "NRSRO" is used in the item "Obligor Identifier Scheme". The value entered
+        should be the acronym of the identifier scheme in upper case. CIK should not be used as an identification scheme as this is explicitly defined.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="ORD" id="r_ORD" substitutionGroup="xbrli:tuple" type="r:ratingDetailType" nillable="false">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The container element used to record rating information about an obligor. One obligor can have multiple ratings
+        over time or different types of ratings.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ratingDetailType">
+    <xs:complexContent>
+      <xs:restriction base="xs:anyType">
+        <xs:sequence>
+          <xs:element ref="r:IP"/>
+          <xs:element ref="r:R"/>
+          <xs:element ref="r:RAD"/>
+          <xs:choice>
+            <xs:sequence>
+              <xs:element ref="r:RAC"/>
+              <xs:element minOccurs="0" ref="r:WST"/>
+              <xs:element minOccurs="0" ref="r:ROL"/>
+              <xs:element minOccurs="0" ref="r:OAN"/>
+            </xs:sequence>
+            <xs:sequence>
+              <xs:element ref="r:WST"/>
+              <xs:element minOccurs="0" ref="r:ROL"/>
+              <xs:element minOccurs="0" ref="r:OAN"/>
+            </xs:sequence>
+            <xs:sequence>
+              <xs:element ref="r:ROL"/>
+              <xs:element minOccurs="0" ref="r:OAN"/>
+            </xs:sequence>
+            <xs:sequence>
+              <xs:element ref="r:OAN"/>
+            </xs:sequence>
+          </xs:choice>
+          <xs:sequence minOccurs="0">
+            <xs:element ref="r:RT"/>
+            <xs:element minOccurs="0" ref="r:RST"/>
+          </xs:sequence>
+          <xs:element minOccurs="0" ref="r:RTT"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="xbrli:tupleAttrs"/>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:element name="IP" id="r_IP" type="xbrli:booleanItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">True for an issuer-paid rating, otherwise false.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="R" id="r_R" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The opinion assigned to the instrument or issuer using the proprietary rating symbology employed by each rating
+        organization such as AAA, A+ or Ba. This item is also used to record watch list status changes such as Positive, Negative, Evolving, Developing,
+        and Stable. In addition, this item is used to record changes in Outlook such as Positive, Negative, Evolving, and Developing. This item is not
+        normalized and rating agencies use their own definitions for this item. This item should be used in conjunction with the Rating Type, Rating
+        Action, and Announcement Type items to determine the nature of the rating opinion e.g. rating, outlook, watch list or trend.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RAD" id="r_RAD" type="xbrli:dateItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The date that the rating was published.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RAC" id="r_RAC" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Rating action classification. This item uses the classification of rating actions from rule 17g-2(2)(b)(v).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:restriction base="xbrli:stringItemType">
+          <xs:enumeration value="HS"/>
+          <xs:enumeration value="NW"/>
+          <xs:enumeration value="UP"/>
+          <xs:enumeration value="DG"/>
+          <xs:enumeration value="WD"/>
+          <xs:enumeration value="WE"/>
+          <xs:enumeration value="WO"/>
+        </xs:restriction>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WST" id="r_WST" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Watch Status. This item records watch list status such as Positive, Negative, Evolving, Developing, and Stable.
+        The NRSRO should use its own standard terminology.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ROL" id="r_ROL" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Rating Outlook. This item is used to record Outlook, such as Positive, Negative, Evolving, and Developing. The
+        NRSRO should use its own standard terminology.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OAN" id="r_OAN" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The description of an Other Announcement type not classifiable under RAC, WST, or ROL. The NRSRO should use its
+        own standard terminology. Example value: "Company name change", "Affirm".
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RT" id="r_RT" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Description of the type of rating being assigned, for example, Bank Fundamental Strength Rating. The NRSRO should
+        use its own standard terminology. The rating type can be further classified using the Rating Term Type and the Rating Subtype.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RST" id="r_RST" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Sub type of the rating type used by the NRSO. This is used to further classify a rating type if necessary. For
+        example, Argentine Rating Scale.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RTT" id="r_RTT" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Description of the term of the rating being assigned, for example, long-term, short-term. The NRSRO should use
+        its own standard terminology.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="ISD" id="r_ISD" substitutionGroup="xbrli:tuple" nillable="false">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The container element for an issuer. It is the equivalent of a record. It contains information about the
+        organization that issued instruments that are being rated.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="r:SSC"/>
+        <xs:element minOccurs="0" ref="r:IG"/>
+        <xs:element ref="r:ISSNAME"/>
+        <xs:choice>
+          <xs:sequence>
+            <xs:element ref="r:LEI"/>
+            <xs:element minOccurs="0" ref="r:CIK"/>
+            <xs:group minOccurs="0" ref="r:IssuerIdentifier"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element ref="r:CIK"/>
+            <xs:group minOccurs="0" ref="r:IssuerIdentifier"/>
+          </xs:sequence>
+          <xs:group ref="r:IssuerIdentifier"/>
+        </xs:choice>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="r:IND"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="xbrli:tupleAttrs"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SSC" id="r_SSC" type="r:SECCategoryItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">This item indicates issuer subclass as defined by the SEC. This can be one of the following: Financial,
+        Insurance, Corporate, RMBS, CMBS, CLO, CDO, ABCP, Other ABS, Other SFP, Sovereign, US Public or INT Public.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IG" id="r_IG" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Used to identify the specific industry of the issuer rather than the broad heading provided by the SEC Rating
+        class. For example this could be Bank, Property Insurance etc. The values used are the proprietary values used by the NRSRO.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ISSNAME" id="r_ISSNAME" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Legal name of the issuer.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:group name="IssuerIdentifier">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Identifiers for the legal entities.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="r:ISI"/>
+      <xs:element ref="r:ISIS"/>
+      <xs:element minOccurs="0" ref="r:ISIOS"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="ISI" id="r_ISI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The unique identifier used to identify an issuer. The identifier used is based on the identification scheme
+        used.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ISIS" id="r_ISIS" type="r:issuerIdentifierSchemeItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The naming standard used for the issuer identifier. This could be CUSIP, DUNS, BIC, SICC (For Japan), or NRSRO.
+        This taxonomy allows multiple identifiers to be described. If the identifier is the proprietary numbering identifier of the NRSRO then use
+        "NRSRO". If the identifier does not exist in the enumerated list then use "Other" and use the item "Issuer Identifier Other Scheme" to define
+        the alternative identifier scheme. The value used for "Issuer Identifier Other Scheme" should be the acronym of the identifier scheme in upper
+        case. CIK should not be used as an identification scheme as this is explicitly defined.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="ISIOS" id="r_ISIOS" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">This item may be used if the value of "NRSRO" is used in the item "Issuer Identifier Scheme". The value entered
+        should be the acronym of the identifier scheme in upper case.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IND" id="r_IND" substitutionGroup="xbrli:tuple" nillable="false">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The container element for an instrument. It is the equivalent of a record. It contains information about the
+        issued instruments that are being rated.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="r:OBT"/>
+        <xs:element ref="r:INSTNAME"/>
+        <xs:choice>
+          <xs:sequence>
+            <xs:element ref="r:CUSIP"/>
+            <xs:group minOccurs="0" ref="r:InstrumentIdentifier"/>
+          </xs:sequence>
+          <xs:group ref="r:InstrumentIdentifier"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="r:IRTD"/>
+        <xs:element minOccurs="0" ref="r:CR"/>
+        <xs:element minOccurs="0" ref="r:MD"/>
+        <xs:element minOccurs="0" ref="r:PV"/>
+        <xs:element minOccurs="0" ref="r:ISUD"/>
+        <xs:element minOccurs="0" ref="r:RODC"/>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="r:INRD"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="xbrli:tupleAttrs"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OBT" id="r_OBT" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">This item indicates whether the rating applies to one of the enumerated values "Program", "Instrument", "Shelf"
+        or "Other".
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:restriction base="xbrli:stringItemType">
+          <xs:enumeration value="Program"/>
+          <xs:enumeration value="Instrument"/>
+          <xs:enumeration value="Shelf"/>
+          <xs:enumeration value="Other"/>
+        </xs:restriction>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INSTNAME" id="r_INSTNAME" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The name used to describe the instrument.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CUSIP" id="r_CUSIP" type="r:cusipItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The nine-character unique securities identifier assigned to the instrument. Committee on Uniform Securities
+        Identification Procedures (CUSIP).
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="cusipItemType">
+    <xs:simpleContent>
+      <xs:restriction base="xbrli:stringItemType">
+        <xs:pattern value="[0-9A-Z]{5}[0-9A-Z#\*@]{3}[0-9]"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:group name="InstrumentIdentifier">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The identifier and identifier scheme used to identify a financial instrument.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="r:INI"/>
+      <xs:choice>
+        <xs:element ref="r:INIS"/>
+        <xs:element ref="r:INIOS"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="INI" id="r_INI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Identifier used in the identifier scheme, to uniquely identify this instrument.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INIS" id="r_INIS" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The naming standard used for the instrument identifier. This could be ISIN, SEDOL, VALOR, WKN, SICC, or NRSRO.
+        This taxonomy allows multiple identifiers to be described. The value entered for ISIN should be "ISIN" the value for a national identifier
+        (NSIN) should be the acronym in upper case e.g. "SEDOL". If it is the proprietary numbering identifier of the NRSRO then use "NRSRO". If the
+        identifier does not exist in the enumerated list then use "Other" and use the item "Instrument Identifier Other Scheme" to define the
+        alternative identifier scheme. The value used for "Instrument Identifier Other Scheme" should be the acronym of the identifier scheme in upper
+        case. CUSIP should not be used as an identification scheme as this is explicitly defined.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:restriction base="xbrli:stringItemType">
+          <xs:enumeration value="ISIN"/>
+          <xs:enumeration value="SEDOL"/>
+          <xs:enumeration value="VALOR"/>
+          <xs:enumeration value="WKN"/>
+          <xs:enumeration value="SICC"/>
+          <xs:enumeration value="NRSRO"/>
+        </xs:restriction>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INIOS" id="r_INIOS" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">This item may be used "Instrument Identifier Scheme" is absent. The value entered should be the acronym of the
+        identifier scheme in upper case. CUSIP must not be used as an identification scheme as this is explicitly defined.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IRTD" id="r_IRTD" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Description of the interest rate (coupon) as being fixed, variable, stepped, zero, index plus spread, floating,
+        none etc.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CR" id="r_CR" type="xbrli:pureItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Coupon rate stated in the contractual debt agreement.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MD" id="r_MD" type="xbrli:dateItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The maturity date of the instrument.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PV" id="r_PV" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">The par (face) value of the debt instrument.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ISUD" id="r_ISUD" type="xbrli:dateItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Issuance date of the instrument.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RODC" id="r_RODC" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="false" xbrli:periodType="duration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Class of debt using the NRSROs own categorization method to identify the class of debt such as senior,
+        subordinated or other properties of the debt issued.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INRD" id="r_INRD" substitutionGroup="xbrli:tuple" type="r:ratingDetailType" nillable="false">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-US">Contains the detailed rating information that is specific to a financial instrument or program being rated.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

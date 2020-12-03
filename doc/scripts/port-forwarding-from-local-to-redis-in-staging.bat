@@ -1,0 +1,1 @@
+kubectl -n staging port-forward service/scopeone-staging-redis-master 6379:6379

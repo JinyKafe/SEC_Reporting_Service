@@ -1,0 +1,5 @@
+/* JOB */
+ALTER TABLE RELEASE ALTER COLUMN archive_file VARBINARY(MAX)
+
+go
+

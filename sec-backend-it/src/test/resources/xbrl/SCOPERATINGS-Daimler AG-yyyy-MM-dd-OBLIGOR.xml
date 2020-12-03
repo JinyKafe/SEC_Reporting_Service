@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:r="http://xbrl.sec.gov/ratings/2015-03-31" xmlns:XLink="http://www.xbrl.org/2003/XLink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xbrl.sec.gov/ratings/2015-03-31 http://xbrl.sec.gov/rocr/2015/ratings-2015-03-31.xsd">
+    <link:schemaRef xlink:type="simple" xlink:href="http://xbrl.sec.gov/rocr/2015/ratings-2015-03-31.xsd"/>
+    <xbrli:context id="m">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.sec.gov/NRSRO">SCOPERATINGS</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:startDate>2017-12-31</xbrli:startDate>
+            <xbrli:endDate>2020-06-24</xbrli:endDate>
+        </xbrli:period>
+    </xbrli:context>
+    <r:ROCRA>
+        <r:RAN contextRef="m">SCOPERATINGS</r:RAN>
+        <r:FCD contextRef="m">2020-06-05</r:FCD>
+        <r:OD>
+            <r:OSC contextRef="m">Corporate</r:OSC>
+            <r:OIG contextRef="m">Automotive Manufacturer</r:OIG>
+            <r:OBNAME contextRef="m">Daimler AG</r:OBNAME>
+            <r:LEI contextRef="m">529900R27DL06UVNT076</r:LEI>
+            <r:ORD>
+                <r:IP contextRef="m">true</r:IP>
+                <r:R contextRef="m">A</r:R>
+                <r:RAD contextRef="m">2017-12-31</r:RAD>
+                <r:RAC contextRef="m">HS</r:RAC>
+                <r:ROL contextRef="m">Stable</r:ROL>
+                <r:RT contextRef="m">Issuer Rating</r:RT>
+                <r:RTT contextRef="m">long-term</r:RTT>
+            </r:ORD>
+            <r:ORD>
+                <r:IP contextRef="m">true</r:IP>
+                <r:R contextRef="m">A</r:R>
+                <r:RAD contextRef="m">2018-06-14</r:RAD>
+                <r:ROL contextRef="m">Stable</r:ROL>
+                <r:OAN contextRef="m">Affirmation</r:OAN>
+                <r:RT contextRef="m">Issuer Rating</r:RT>
+                <r:RTT contextRef="m">long-term</r:RTT>
+            </r:ORD>
+            <r:ORD>
+                <r:IP contextRef="m">true</r:IP>
+                <r:R contextRef="m">A</r:R>
+                <r:RAD contextRef="m">2020-06-24</r:RAD>
+                <r:ROL contextRef="m">Stable</r:ROL>
+                <r:OAN contextRef="m">Affirmation</r:OAN>
+                <r:RT contextRef="m">Issuer Rating</r:RT>
+                <r:RTT contextRef="m">long-term</r:RTT>
+            </r:ORD>
+        </r:OD>
+    </r:ROCRA>
+</xbrli:xbrl>

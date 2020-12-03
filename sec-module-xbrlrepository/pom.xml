@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>sec-reporting</artifactId>
+    <groupId>de.scope.scopeone</groupId>
+    <version>0.0.6-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>sec-module-xbrlrepository</artifactId>
+  <version>0.0.6-SNAPSHOT</version>
+  <name>SEC module / XBRLREPOSITORY</name>
+  <description>SEC reporting / module for storage of generated XBRL reports into database</description>
+
+  <dependencies>
+
+    <!-- ****************** -->
+    <!-- common SEC modules -->
+    <!-- ****************** -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>sec-common-lib</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- *********** -->
+    <!-- Third party -->
+    <!-- *********** -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+    </dependency>
+
+        <dependency>
+          <groupId>org.flywaydb</groupId>
+          <artifactId>flyway-core</artifactId>
+        </dependency>
+
+    <!-- *************** -->
+    <!-- Test            -->
+    <!-- *************** -->
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <artifactId>mssqlserver</artifactId>
+      <groupId>org.testcontainers</groupId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+</project>

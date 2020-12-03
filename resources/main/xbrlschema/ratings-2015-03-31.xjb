@@ -1,0 +1,25 @@
+<jxb:bindings xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="1.0">
+
+
+  <jxb:bindings node="//xsd:schema" schemaLocation="http://www.xbrl.org/2003/xl-2003-12-31.xsd">
+    <jxb:bindings node="//xsd:complexType[@name='arcType']">
+      <jxb:bindings node=".//xsd:element">
+        <jxb:property name="arcTitleType"/>
+      </jxb:bindings>
+    </jxb:bindings>
+    <!-- rename the value element -->
+    <jxb:bindings node="//xsd:complexType[@name='locatorType']">
+      <jxb:bindings node=".//xsd:element">
+        <jxb:property name="locatorTitleType"/>
+      </jxb:bindings>
+    </jxb:bindings>
+  </jxb:bindings>
+
+  <jxb:bindings node="//xsd:schema" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+    <jxb:bindings node=".//xsd:element[@name='documentation']">
+      <jxb:class name="linkbaseDocumentationType"/>
+    </jxb:bindings>
+  </jxb:bindings>
+</jxb:bindings>
